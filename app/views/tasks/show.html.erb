@@ -1,0 +1,11 @@
+<h2><%= @task.name %></h2>
+<p><%= @task.details %></p>
+<p>
+<% if @task.completed == true  %>
+    <%= "Done ✅" %>
+<% else %>
+    <%= "Not done ❌" %>
+<% end %>
+</p>
+<%= link_to "Edit a task", edit_task_path, class: "btn btn-success" %>
+<%= link_to "Back to list", tasks_path, class: "btn btn-dark" %>
